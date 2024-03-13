@@ -21,7 +21,7 @@ initializeGame();
 function initializeGame(){
     cells.forEach(cell => cell.addEventListener("click", cellClicked));
     restartBtn.addEventListener("click", restartGame);
-    statusText.textContent = `${currentPlayer}'s turn`;
+    statusText.textContent = `${currentPlayer}'s turn`
     running = true;
 
 }
@@ -32,7 +32,6 @@ function cellClicked(){
     }
 
     updateCell(this, cellIndex);
-    changePlayer();
     checkWinner();
 
 }
@@ -42,7 +41,7 @@ function updateCell(cell, index){
 }
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
-    statusText.textContent = `${currentPlayer}'s turn`;
+    statusText.textContent = `${currentPlayer}'s turn`
 }
 function checkWinner(){
     let roundWon = false;
@@ -69,11 +68,25 @@ function checkWinner(){
         statusText.textContent = `Draw!`;
         running = false;
     }
-    // else{
-    //     changePlayer();
-    // }
+    else{
+        changePlayer();
+    }
     
 }
 function restartGame(){
-
+    currentPlayer = "X";
+    options = ["", "", "", "", "", "", "", "", ""];
+    statusText.textContent = `${currentPlayer}'s turn`
+    cells.forEach(cell => cell.textContent = "");
+    running = true
+}
+let btns = document.getElementsByClassName("btn");
+for(let j = 0; j < btns.length; j++) {
+btns[j].addEventListener("click", function(){
+let buttonStyle = getComputedStyle(this);
+let buttonTxtColor = 
+            buttonStyle["textColor"];
+document.body.style.textColor
+                         = buttonTxtColor;
+    })
 }
