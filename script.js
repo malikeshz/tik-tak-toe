@@ -80,13 +80,13 @@ function restartGame(){
     cells.forEach(cell => cell.textContent = "");
     running = true
 }
-let btns = document.getElementsByClassName("btn");
-for(let j = 0; j < btns.length; j++) {
-btns[j].addEventListener("click", function(){
-let buttonStyle = getComputedStyle(this);
-let buttonTxtColor = 
-            buttonStyle["textColor"];
-document.body.style.textColor
-                         = buttonTxtColor;
-    })
-}
+// let btns = document.getElementsByClassName("btn");
+// for(let j = 0; j < btns.length; j++) {
+// btns[j].addEventListener("click", function(){
+// let buttonStyle = getComputedStyle(this);
+// let buttonTxtColor = 
+//             buttonStyle["textColor"];
+// document.body.style.textColor
+//                          = buttonTxtColor;
+//     })
+// }

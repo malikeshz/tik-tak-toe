@@ -17,8 +17,9 @@
 #game-container {
     font-family: "Permanent Marker", cursive;
     text-align: center;
+    /* background-image: url(1000_F_369917263_w4o5m71FguFKGfJcOwFmcxfORB9fIBW4.jpg); */
 }
-.red {
+/* .red {
     padding: 10px 20px;
     margin-bottom: 20px;
     background: var(--red);
@@ -45,7 +46,7 @@
     background: var(--black);
     border: none;
     cursor: pointer;
-}
+} */
 
 
 #cell-container {
